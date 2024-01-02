@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package calculator;
+
+option go_package = "github.com/cscookie/grpc-go-course/calculator/proto";
+
+import "sqrt.proto";
+
+service CalculatorService {
+    rpc Sqrt (SqrtRequest) returns (SqrtResponse);
+}

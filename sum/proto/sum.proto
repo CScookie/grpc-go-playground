@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package sum;
+
+option go_package = "github.com/cscookie/grpc-go-course/sum/proto";
+
+message SumRequest {
+    uint32 first_int = 1;
+    uint32 second_int = 2;
+}
+
+message SumResponse {
+    uint32 result = 1;
+}
+
+service SumService {
+    rpc Sum (SumRequest) returns (SumResponse);
+}
